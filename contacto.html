@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta name="geo.region" content="CL-RM">
+<meta name="geo.placename" content="Santiago">
+<meta name="ICBM" content="-33.4489, -70.6693">
+
+    <meta charset="UTF-8">
+    <title>Contacto | Zeus Technology</title>
+    <meta name="description" content="Contacto Zeus Technology, soporte informático en Parral.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Open Graph / Redes Sociales -->
+<meta property="og:title" content="Zeus Technology - Soluciones Tecnológicas">
+<meta property="og:description" content="Soporte TI, redes y asesoría tecnológica para empresas y colegios.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.postimg.cc/s27TdqWQ/pc.jpg">
+<meta property="og:locale" content="es_CL">
+<link rel="manifest" href="manifest.json">
+
+<meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+img-src 'self' https://i.postimg.cc https://maps.gstatic.com data:;
+style-src 'self' 'unsafe-inline';
+script-src 'self' 'unsafe-inline' https://maps.googleapis.com;
+font-src 'self';
+frame-src https://www.google.com;
+connect-src 'self' https://maps.googleapis.com https://www.google.com;
+">
+
+
+</head>
+<body>
+
+<header>
+    <svg class="logo-hex" viewBox="0 0 64 64" aria-hidden="true">
+        <!-- Hexágono -->
+        <polygon points="32 4 56 18 56 46 32 60 8 46 8 18"/>
+        <!-- Núcleo -->
+        <circle cx="32" cy="32" r="6"/>
+        <!-- Conexiones -->
+        <path d="M32 10v10M32 44v10M14 32h10M40 32h10"/>
+    </svg>
+
+    <h1>Contacto</h1>
+</header>
+
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+    <section>
+        <p>Santiago — Región metropolitana</p>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.8258802820196!2d-70.67111082349683!3d-33.55790000302445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662da354807272b%3A0xddafa97b22701072!2sJorge%20Luco%2C%20El%20Bosque%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1768005176901!5m2!1ses!2scl"
+            width="600"
+            height="450"
+            style="border:0; margin-top:30px;"
+            allowfullscreen
+            loading="lazy">
+        </iframe>
+    </section>
+    <section>
+    <h2>Contáctanos</h2>
+
+    <form action="https://formsubmit.co/TUEMAIL@DOMINIO.CL" method="POST">
+        
+        <!-- Configuración -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nuevo contacto desde Zeus Technology">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Campos -->
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="text" name="empresa" placeholder="Empresa / Colegio">
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+
+        <button type="submit" class="btn">Enviar Mensaje</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    © 2024 Zeus Technology — Todos los derechos reservados<br>
+    Soporte TI · Redes · Asesoría Tecnológica
+</footer>
+
+
+<a class="whatsapp"
+   href="https://wa.me/569XXXXXXXX"
+   target="_blank"
+   aria-label="Contacto directo por WhatsApp">
+   💬
+</a>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+</script>
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+});
+
+document.querySelectorAll("section").forEach(sec => {
+    sec.classList.add("hidden");
+    observer.observe(sec);
+});
+</script>
+</body>
+</html>
