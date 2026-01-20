@@ -1,95 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="geo.region" content="CL-RM">
-<meta name="geo.placename" content="Santiago">
-<meta name="ICBM" content="-33.4489, -70.6693">
-
     <meta charset="UTF-8">
-    <title>Perfil | Zeus Technology</title>
-    <meta name="description" content="Perfil profesional de Zeus Technology, especialistas en soluciones TI.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Corporativo | Zeus Technology</title>
+    <meta name="description" content="Conoce la misión, visión y los valores de Zeus Technology, expertos en soporte TI y redes en Chile.">
+    <meta name="theme-color" content="#000000">
+    
     <link rel="stylesheet" href="estilos.css">
-    <!-- Open Graph / Redes Sociales -->
-<meta property="og:title" content="Zeus Technology - Soluciones Tecnológicas">
-<meta property="og:description" content="Soporte TI, redes y asesoría tecnológica para empresas y colegios.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://i.postimg.cc/s27TdqWQ/pc.jpg">
-<meta property="og:locale" content="es_CL">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#f1c40f">
-
-<meta http-equiv="Content-Security-Policy"
-content="
-default-src 'self';
-img-src 'self' https://i.postimg.cc https://maps.gstatic.com data:;
-style-src 'self' 'unsafe-inline';
-script-src 'self' 'unsafe-inline' https://maps.googleapis.com;
-font-src 'self';
-frame-src https://www.google.com;
-connect-src 'self' https://maps.googleapis.com https://www.google.com;
-">
-
-
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-<header>
-    <svg class="logo-hex" viewBox="0 0 64 64" aria-hidden="true">
-        <!-- Hexágono -->
-        <polygon points="32 4 56 18 56 46 32 60 8 46 8 18"/>
-        <!-- Núcleo -->
-        <circle cx="32" cy="32" r="6"/>
-        <!-- Conexiones -->
-        <path d="M32 10v10M32 44v10M14 32h10M40 32h10"/>
-    </svg>
-
-    <h1>Perfil Corporativo</h1>
-</header>
-
-
 <nav>
     <a href="index.html">Inicio</a>
-    <a href="perfil.html">Perfil</a>
+    <a href="perfil.html" class="active">Perfil</a>
     <a href="servicios.html">Servicios</a>
     <a href="contacto.html">Contacto</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar modo">🌙</button>
 </nav>
-
-<main>
     
-</p>
-
-
-        <img src="https://i.postimg.cc/sDP7pWW4/Chat-GPT-Image-9-ene-2026-21-53-56.png" loading="lazy"
->
+<main>
+    <section class="card">
+        <div style="text-align: center;">
+            <svg class="logo-hex" viewBox="0 0 64 64" style="width: 50px; margin-bottom: 10px;">
+                <polygon points="32 4 56 18 56 46 32 60 8 46 8 18" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                <circle cx="32" cy="32" r="6" fill="var(--accent)"/>
+            </svg>
+            <h2>Nuestra Identidad</h2>
+            <div class="section-divider"></div>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Somos un equipo de profesionales apasionados por la eficiencia tecnológica. Con sede en Chile, <strong>Zeus Technology</strong> nació para cerrar la brecha entre la tecnología compleja y las necesidades reales de las organizaciones modernas, ofreciendo soluciones de infraestructura que realmente funcionan.
+        </p>
     </section>
+
+    <div class="services-grid" style="margin-top: 20px;">
+        <div class="card" style="text-align: center; margin-bottom: 0;">
+            <span style="font-size: 3rem; display: block; margin-bottom: 15px;">🎯</span>
+            <h3 style="color: var(--accent); margin-bottom: 15px;">Misión</h3>
+            <p style="font-size: 0.95rem; color: var(--text-soft);">Garantizar la continuidad operativa de nuestros clientes mediante soluciones TI de vanguardia y un soporte técnico de excelencia.</p>
+        </div>
+
+        <div class="card" style="text-align: center; margin-bottom: 0;">
+            <span style="font-size: 3rem; display: block; margin-bottom: 15px;">👁️</span>
+            <h3 style="color: var(--accent); margin-bottom: 15px;">Visión</h3>
+            <p style="font-size: 0.95rem; color: var(--text-soft);">Ser el referente líder en soporte y redes en la región, destacados por nuestra fiabilidad, innovación y compromiso humano.</p>
+        </div>
+
+        <div class="card" style="text-align: center; margin-bottom: 0;">
+            <span style="font-size: 3rem; display: block; margin-bottom: 15px;">💎</span>
+            <h3 style="color: var(--accent); margin-bottom: 15px;">Valores</h3>
+            <p style="font-size: 0.95rem; color: var(--text-soft);">Integridad en cada proceso, respuesta inmediata ante emergencias y una excelencia técnica innegociable en cada trabajo realizado.</p>
+        </div>
+    </div>
 </main>
 
 <footer>
-    © 2024 Zeus Technology — Todos los derechos reservados<br>
-    Soporte TI · Redes · Asesoría Tecnológica
+    <div class="footer-container">
+        <div>
+            <h4 class="footer-title">Zeus Technology</h4>
+            <p class="footer-text">Líderes en soluciones de infraestructura informática y redes de alta disponibilidad en Chile.</p>
+        </div>
+        <div>
+            <h4 class="footer-title">Enlaces</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="footer-title">Contacto</h4>
+            <p class="footer-text">📧 contacto@zeustechnology.cl</p>
+            <p class="footer-text">📍 Santiago · Región Metropolitana</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2024 Zeus Technology — Todos los derechos reservados<br>
+        Soporte TI · Redes · Asesoría Tecnológica
+    </div>
 </footer>
 
+<a href="https://wa.me/569XXXXXXXX" class="whatsapp" target="_blank" aria-label="WhatsApp">💬</a>
 
-<a class="whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">💬</a>
 <script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-}
-</script>
-<script>
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+    const btn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Lógica persistente de tema
+    if(localStorage.getItem('theme') === 'light') {
+        body.classList.add('light');
+        btn.textContent = '🌞';
+    }
+
+    btn.addEventListener('click', () => {
+        body.classList.toggle('light');
+        const isLight = body.classList.contains('light');
+        btn.textContent = isLight ? '🌞' : '🌙';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
-});
 
-document.querySelectorAll("section").forEach(sec => {
-    sec.classList.add("hidden");
-    observer.observe(sec);
-});
+    // Scroll Reveal para las tarjetas
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll("section, .card").forEach(el => {
+        el.classList.add("hidden");
+        observer.observe(el);
+    });
+
+    // Registro de PWA
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").catch(err => console.log(err));
+    }
 </script>
 </body>
 </html>
