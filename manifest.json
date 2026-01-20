@@ -1,19 +1,14 @@
 {
   "name": "Zeus Technology",
-  "short_name": "Zeus TI",
+  "short_name": "ZeusTech",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#0a0a0a",
   "theme_color": "#f1c40f",
   "icons": [
     {
-      "src": "img/logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
- {
-      "src": "img/logo-512.png",
-      "sizes": "512x512",
+      "src": "img/favicon.png",
+      "sizes": "48x48",
       "type": "image/png"
     }
   ]
