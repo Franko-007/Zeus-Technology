@@ -1,226 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="geo.region" content="CL-RM">
-<meta name="geo.placename" content="Santiago">
-<meta name="ICBM" content="-33.4489, -70.6693">
-
     <meta charset="UTF-8">
-    <title>Servicios | Zeus Technology</title>
-    <meta name="description" content="Servicios profesionales de soporte TI, redes y asesoría tecnológica.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Especializados | Zeus Technology</title>
+    <meta name="description" content="Soporte TI, Redes e Infraestructura, Asesoría y Seguridad Tecnológica en Santiago y Maule.">
+    <meta name="theme-color" content="#000000">
+    
     <link rel="stylesheet" href="estilos.css">
-    <!-- Open Graph / Redes Sociales -->
-<meta property="og:title" content="Zeus Technology - Soluciones Tecnológicas">
-<meta property="og:description" content="Soporte TI, redes y asesoría tecnológica para empresas y colegios.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://i.postimg.cc/s27TdqWQ/pc.jpg">
-<meta property="og:locale" content="es_CL">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#f1c40f">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Soporte TI Profesional",
-  "provider": {
-    "@type": "Organization",
-    "name": "Zeus Technology"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Chile"
-  },
-  "description": "Soporte informático preventivo y correctivo para empresas y colegios.",
-  "serviceType": "IT Support"
-}
-</script>
-
-<meta http-equiv="Content-Security-Policy"
-content="
-default-src 'self';
-img-src 'self' https://i.postimg.cc https://maps.gstatic.com data:;
-style-src 'self' 'unsafe-inline';
-script-src 'self' 'unsafe-inline' https://maps.googleapis.com;
-font-src 'self';
-frame-src https://www.google.com;
-connect-src 'self' https://maps.googleapis.com https://www.google.com;
-">
-
-
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-
-<header>
-    <svg class="logo-hex" viewBox="0 0 64 64" aria-hidden="true">
-        <!-- Hexágono -->
-        <polygon points="32 4 56 18 56 46 32 60 8 46 8 18"/>
-        <!-- Núcleo -->
-        <circle cx="32" cy="32" r="6"/>
-        <!-- Conexiones -->
-        <path d="M32 10v10M32 44v10M14 32h10M40 32h10"/>
-    </svg>
-
-    <h1>Servicios Profesionales</h1>
-</header>
-
 
 <nav>
     <a href="index.html">Inicio</a>
     <a href="perfil.html">Perfil</a>
-    <a href="servicios.html">Servicios</a>
+    <a href="servicios.html" class="active">Servicios</a>
     <a href="contacto.html">Contacto</a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar modo">🌙</button>
 </nav>
-<body data-hero-title="Servicios Profesionales"
-      data-hero-subtitle="Soporte TI · Redes · Seguridad">
+
+<header>
+    <svg class="logo-hex" viewBox="0 0 64 64" aria-hidden="true">
+        <polygon points="32 4 56 18 56 46 32 60 8 46 8 18"/>
+        <circle cx="32" cy="32" r="6"/>
+        <path d="M32 10v10M32 44v10M14 32h10M40 32h10"/>
+    </svg>
+    <h1>Servicios TI Especializados</h1>
+    <p class="subtitle-tech">SOLUCIONES DE ALTO RENDIMIENTO</p>
+</header>
 
 <main>
-    <section>
-        <ul>
-            
-        </ul>
-        <img src="https://i.postimg.cc/nhkKtmcZ/Servicios.jpg" class="img" alt="Servicios TI" loading="lazy"
->
+    <section class="services-grid">
+        <article class="card">
+            <span class="value-icon">🖥️</span>
+            <h3>Soporte TI</h3>
+            <p>Mantenimiento preventivo y correctivo para garantizar la continuidad de tu operación.</p>
+            <button class="btn-sm open-details" 
+                data-title="Soporte TI Profesional"
+                data-info="Nuestro servicio de soporte cubre todas las necesidades críticas de tu empresa:"
+                data-items="Mantenimiento preventivo de Hardware,Soporte remoto y presencial 24/7,Gestión de sistemas operativos (Windows/Linux),Limpieza técnica profunda de equipos">
+                Ver detalles
+            </button>
+        </article>
+
+        <article class="card">
+            <span class="value-icon">🌐</span>
+            <h3>Redes e Infraestructura</h3>
+            <p>Diseño y certificación de redes de alta velocidad para entornos exigentes.</p>
+            <button class="btn-sm open-details" 
+                data-title="Infraestructura de Red"
+                data-info="Construimos la columna vertebral de tu comunicación digital:"
+                data-items="Cableado estructurado Cat6 y Fibra Óptica,Configuración de Switches y Routers (Cisco/Mikrotik),Sistemas Wi-Fi 6 de alta densidad,Ordenamiento de racks y salas de servidores">
+                Ver detalles
+            </button>
+        </article>
+
+        <article class="card">
+            <span class="value-icon">📊</span>
+            <h3>Asesoría TI</h3>
+            <p>Consultoría estratégica para optimizar la inversión en tecnología y procesos.</p>
+            <button class="btn-sm open-details" 
+                data-title="Consultoría Estratégica"
+                data-info="Te ayudamos a tomar las mejores decisiones tecnológicas:"
+                data-items="Auditoría de inventario tecnológico,Planificación de transformación digital,Optimización de costos en licenciamiento,Evaluación de ROI en nuevos proyectos">
+                Ver detalles
+            </button>
+        </article>
+        
+        <article class="card">
+            <span class="value-icon">🔐</span>
+            <h3>Seguridad</h3>
+            <p>Protección integral de datos y activos tecnológicos contra amenazas externas.</p>
+            <button class="btn-sm open-details" 
+                data-title="Seguridad Tecnológica"
+                data-info="Blindamos tu información con tecnología de punta:"
+                data-items="Implementación de Firewalls perimetrales,Sistemas de Backup automatizado en la nube,Instalación de cámaras de seguridad IP,Políticas de control de acceso para usuarios">
+                Ver detalles
+            </button>
+        </article>
     </section>
-    <section class="services">
-    <h2>Servicios Profesionales</h2>
-    <div class="section-divider"></div>
-
-    <div class="services-grid">
-
-        <section class="card">
-            <h3>🖥️ Soporte TI</h3>
-            <p>
-                Soporte técnico preventivo y correctivo para equipos, sistemas operativos
-                y usuarios finales, garantizando continuidad operativa.
-            </p>
-        </section>
-
-        <section class="card">
-            <h3>🌐 Redes e Infraestructura</h3>
-            <p>
-                Diseño, instalación y mantenimiento de redes cableadas e inalámbricas
-                bajo estándares profesionales.
-            </p>
-        </section>
-
-        <section class="card">
-            <h3>🔐 Seguridad Tecnológica</h3>
-            <p>
-                Implementación de políticas de seguridad, respaldos, control de accesos
-                y buenas prácticas TI.
-            </p>
-        </section>
-
-        <section class="card">
-            <h3>📊 Asesoría Tecnológica</h3>
-            <p>
-                Evaluación, planificación y optimización de recursos tecnológicos
-                alineados a los objetivos del negocio.
-            </p>
-        </section>
-
-    </div>
-</section>
-<section class="why-us">
-    <h2>¿Por qué elegir Zeus Technology?</h2>
-    <div class="section-divider"></div>
-
-    <div class="why-grid">
-        <div class="why-item">
-            <span>⚡</span>
-            <p>Respuesta rápida y soporte oportuno</p>
-        </div>
-
-        <div class="why-item">
-            <span>🛡️</span>
-            <p>Enfoque en seguridad y estabilidad TI</p>
-        </div>
-
-        <div class="why-item">
-            <span>🎯</span>
-            <p>Soluciones adaptadas a cada cliente</p>
-        </div>
-
-        <div class="why-item">
-            <span>🤝</span>
-            <p>Acompañamiento profesional continuo</p>
-        </div>
-    </div>
-</section>
-<section class="stats">
-    <div class="stat">
-        <span class="counter" data-target="10">0</span>
-        <p>Años de experiencia</p>
-    </div>
-
-    <div class="stat">
-        <span class="counter" data-target="150">0</span>
-        <p>Equipos gestionados</p>
-    </div>
-
-    <div class="stat">
-        <span class="counter" data-target="50">0</span>
-        <p>Clientes atendidos</p>
-    </div>
-</section>
-<script>
-const counters = document.querySelectorAll(".counter");
-
-const countObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const el = entry.target;
-            const target = +el.dataset.target;
-            let count = 0;
-            const step = target / 60;
-
-            const update = () => {
-                count += step;
-                if (count < target) {
-                    el.textContent = Math.ceil(count);
-                    requestAnimationFrame(update);
-                } else {
-                    el.textContent = target;
-                }
-            };
-
-            update();
-            countObserver.unobserve(el);
-        }
-    });
-});
-
-counters.forEach(c => countObserver.observe(c));
-</script>
-
 </main>
 
+<div class="modal" id="serviceModal">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-body">
+            <h2 id="modalTitle" style="text-align: left; margin-bottom: 10px; color: var(--accent);"></h2>
+            <div class="section-divider" style="margin: 0 0 20px 0;"></div>
+            <p id="modalDesc" style="margin-bottom: 20px; color: var(--text-main);"></p>
+            <ul id="modalList" style="list-style: none; padding-left: 0;"></ul>
+            <a href="contacto.html" class="btn" style="display: block; margin-top: 30px; text-decoration: none; text-align: center;">Solicitar Cotización</a>
+        </div>
+    </div>
+</div>
+
 <footer>
-    © 2024 Zeus Technology — Todos los derechos reservados<br>
-    Soporte TI · Redes · Asesoría Tecnológica
+    <div class="footer-container">
+        <div>
+            <h4 class="footer-title">Zeus Technology</h4>
+            <p class="footer-text">Especialistas en infraestructura informática de alta disponibilidad y soporte técnico corporativo.</p>
+        </div>
+        <div>
+            <h4 class="footer-title">Explorar</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="footer-title">Asistencia</h4>
+            <p class="footer-text">📧 soporte@zeustechnology.cl</p>
+            <p class="footer-text">📍 Santiago · Región Metropolitana</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2024 Zeus Technology — Todos los derechos reservados<br>
+        Soporte TI · Redes · Asesoría Tecnológica
+    </div>
 </footer>
 
+<a href="https://wa.me/569XXXXXXXX?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios" class="whatsapp" target="_blank" aria-label="WhatsApp">💬</a>
 
-<a class="whatsapp" href="https://wa.me/569XXXXXXXX" target="_blank">💬</a>
 <script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-}
-</script>
-<script>
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+    // Lógica del Modal Dinámico
+    const modal = document.getElementById('serviceModal');
+    const closeBtn = document.querySelector('.close-modal');
+    const detailBtns = document.querySelectorAll('.open-details');
+    const mTitle = document.getElementById('modalTitle');
+    const mDesc = document.getElementById('modalDesc');
+    const mList = document.getElementById('modalList');
+
+    detailBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            mTitle.innerText = btn.getAttribute('data-title');
+            mDesc.innerText = btn.getAttribute('data-info');
+            mList.innerHTML = '';
+            const items = btn.getAttribute('data-items').split(',');
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.style.marginBottom = "10px";
+                li.style.fontSize = "0.9rem";
+                li.innerHTML = `<span style="color: var(--accent); margin-right: 10px;">⚡</span> ${item}`;
+                mList.appendChild(li);
+            });
+            modal.classList.add('active');
+        });
     });
-});
 
-document.querySelectorAll("section").forEach(sec => {
-    sec.classList.add("hidden");
-    observer.observe(sec);
-});
+    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+
+    // Theme Toggle (Persistente)
+    const themeBtn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if(localStorage.getItem('theme') === 'light') {
+        body.classList.add('light');
+        themeBtn.textContent = '🌞';
+    }
+
+    themeBtn.textContent = body.classList.contains('light') ? '🌞' : '🌙';
+
+    themeBtn.addEventListener('click', () => {
+        body.classList.toggle('light');
+        const isLight = body.classList.contains('light');
+        themeBtn.textContent = isLight ? '🌞' : '🌙';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+
+    // Scroll Reveal Animation
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".card, section").forEach(el => {
+        el.classList.add("hidden");
+        observer.observe(el);
+    });
+
+    // PWA Service Worker
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").catch(err => console.log(err));
+    }
 </script>
 </body>
 </html>
