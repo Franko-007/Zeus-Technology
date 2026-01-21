@@ -1,7 +1,6 @@
-// Nombre de la caché (Cámbiale la versión v1, v2... cuando hagas cambios grandes)
-const CACHE_NAME = "zeus-cache-v1";
+// Cambiamos la versión a v2 para forzar la limpieza
+const CACHE_NAME = "zeus-cache-v2";
 
-// Archivos críticos para que la web funcione sin internet
 const ASSETS_TO_CACHE = [
     "./",
     "index.html",
@@ -12,7 +11,7 @@ const ASSETS_TO_CACHE = [
     "manifest.json"
 ];
 
-// EVENTO DE INSTALACIÓN: Guarda los archivos en el navegador
+// INSTALACIÓN
 self.addEventListener("install", e => {
     e.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
@@ -22,7 +21,7 @@ self.addEventListener("install", e => {
     );
 });
 
-// EVENTO DE ACTIVACIÓN: Borra versiones viejas de la caché automáticamente
+// ACTIVACIÓN: Limpia cachés viejas
 self.addEventListener("activate", event => {
     event.waitUntil(
         caches.keys().then(keys =>
@@ -38,20 +37,21 @@ self.addEventListener("activate", event => {
     );
 });
 
-// EVENTO FETCH: La magia que permite ver la web offline
+// EVENTO FETCH: ESTRATEGIA NETWORK FIRST (CORREGIDO)
 self.addEventListener("fetch", e => {
     e.respondWith(
-        caches.match(e.request).then(response => {
-            // Si el archivo está en caché, lo entrega. Si no, lo busca en internet.
-            return response || fetch(e.request).then(fetchResponse => {
-                // Opcional: Podríamos guardar dinámicamente nuevos recursos aquí
-                return fetchResponse;
-            });
-        }).catch(() => {
-            // Si falla todo (no hay red ni caché), podrías mostrar una página de error
-            if (e.request.mode === 'navigate') {
-                return caches.match("index.html");
-            }
-        })
+        // Intentamos primero buscar en internet
+        fetch(e.request)
+            .then(networkResponse => {
+                // Si funciona, guardamos una copia actualizada en caché
+                return caches.open(CACHE_NAME).then(cache => {
+                    cache.put(e.request, networkResponse.clone());
+                    return networkResponse;
+                });
+            })
+            .catch(() => {
+                // Si falla internet (Offline), buscamos en la caché
+                return caches.match(e.request);
+            })
     );
 });
