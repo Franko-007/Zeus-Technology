@@ -1,6 +1,6 @@
 /* =========================
-   VARIABLES DARK GOLD & TECH
-   ========================= */
+    VARIABLES DARK GOLD & TECH
+    ========================= */
 :root {
     --bg-main: #000000;
     --bg-overlay: rgba(0, 0, 0, 0.85);
@@ -105,6 +105,7 @@ nav a {
     text-transform: uppercase;
     transition: var(--transition);
     position: relative;
+    cursor: pointer;
 }
 
 nav a:hover, nav a.active { color: #ffffff !important; }
@@ -277,11 +278,12 @@ main {
     z-index: 999;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: var(--transition);
+    cursor: pointer;
 }
 
 /* ===================================================
-   FOOTER FINAL (BLINDADO PARA GITHUB)
-   =================================================== */
+    FOOTER FINAL (BLINDADO PARA GITHUB)
+    =================================================== */
 footer {
     background: #050505 !important;
     padding: 60px 20px 20px !important;
@@ -326,6 +328,7 @@ footer {
     text-decoration: none !important;
     transition: var(--transition) !important;
     display: inline-block !important;
+    cursor: pointer;
 }
 
 .footer-links a:hover {
@@ -354,11 +357,13 @@ footer {
     .card { padding: 25px; }
     .footer-container { text-align: center !important; }
 }
+
 /* REGLA MAESTRA PARA BOTONES EN GITHUB */
 .card a, 
 .services-grid a, 
 .btn, 
-[class*="details"] {
+[class*="details"],
+button {
     background-color: #f1c40f !important; /* Gold */
     color: #000000 !important;
     padding: 12px 24px !important;
@@ -369,10 +374,15 @@ footer {
     border: none !important;
     margin-top: 15px !important;
     box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3) !important;
+    
+    /* ACTIVACIÓN DE LA MANITO */
+    cursor: pointer !important;
 }
 
-.card a:hover {
+.card a:hover,
+.services-grid a:hover,
+.btn:hover,
+[class*="details"]:hover {
     background-color: #ffffff !important;
-    transform: translateY(-2px);
+    transform: translateY(-2px) !important;
 }
-
