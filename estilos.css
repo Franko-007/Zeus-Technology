@@ -354,3 +354,25 @@ footer {
     .card { padding: 25px; }
     .footer-container { text-align: center !important; }
 }
+/* REGLA MAESTRA PARA BOTONES EN GITHUB */
+.card a, 
+.services-grid a, 
+.btn, 
+[class*="details"] {
+    background-color: #f1c40f !important; /* Gold */
+    color: #000000 !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-weight: bold !important;
+    border: none !important;
+    margin-top: 15px !important;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3) !important;
+}
+
+.card a:hover {
+    background-color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
