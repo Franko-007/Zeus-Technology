@@ -1,5 +1,5 @@
-// Cambiamos la versión a v2 para forzar la limpieza
-const CACHE_NAME = "zeus-cache-v2";
+// Nombre de la caché - Subimos a v3 para forzar la limpieza total
+const CACHE_NAME = "zeus-cache-v3";
 
 const ASSETS_TO_CACHE = [
     "./",
@@ -11,7 +11,7 @@ const ASSETS_TO_CACHE = [
     "manifest.json"
 ];
 
-// INSTALACIÓN
+// INSTALACIÓN: Guarda los archivos iniciales
 self.addEventListener("install", e => {
     e.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
@@ -21,7 +21,7 @@ self.addEventListener("install", e => {
     );
 });
 
-// ACTIVACIÓN: Limpia cachés viejas
+// ACTIVACIÓN: Borra cualquier rastro de versiones viejas
 self.addEventListener("activate", event => {
     event.waitUntil(
         caches.keys().then(keys =>
@@ -37,20 +37,19 @@ self.addEventListener("activate", event => {
     );
 });
 
-// EVENTO FETCH: ESTRATEGIA NETWORK FIRST (CORREGIDO)
+// EVENTO FETCH: ESTRATEGIA NETWORK-FIRST (Clave para que el CSS cargue)
 self.addEventListener("fetch", e => {
     e.respondWith(
-        // Intentamos primero buscar en internet
         fetch(e.request)
             .then(networkResponse => {
-                // Si funciona, guardamos una copia actualizada en caché
+                // Si hay internet, actualizamos la caché con lo nuevo
                 return caches.open(CACHE_NAME).then(cache => {
                     cache.put(e.request, networkResponse.clone());
                     return networkResponse;
                 });
             })
             .catch(() => {
-                // Si falla internet (Offline), buscamos en la caché
+                // Si falla internet, usamos lo que tengamos guardado
                 return caches.match(e.request);
             })
     );
